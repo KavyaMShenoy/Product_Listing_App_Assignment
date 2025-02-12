@@ -1,0 +1,18 @@
+.searchFormContainer {
+    position: relative;
+}
+
+.searchInput {
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+.searchButton {
+    color: white;
+    position: absolute;
+    border: none;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
