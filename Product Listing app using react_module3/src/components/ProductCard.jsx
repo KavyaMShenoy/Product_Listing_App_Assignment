@@ -8,7 +8,7 @@ function ProductCard(productDetails) {
             <Card.Body style={{ backgroundColor: "lightblue", color: "#AA336A" }}>
                 <Card.Title>{productDetails.product.name}</Card.Title>
                 <Card.Text>
-                    <span className="productPrice">{productDetails.product.price}</span>
+                    <span className="productPrice">Rs {productDetails.product.price}</span>
                 </Card.Text>
             </Card.Body>
         </Card>

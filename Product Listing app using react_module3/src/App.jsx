@@ -9,7 +9,7 @@ function App() {
         <h1 className='p-3 text-center' style={{ color: "#AA336A" }}>Products</h1>
       </div>
 
-      <div className="pt-1">
+      <div className="pt-1" style={{paddingBottom:"30px"}}>
         <CategoryFilter productsList={productsJson} />
       </div>
     </>
