@@ -13,7 +13,7 @@ function CategoryFilter(productsJson) {
 
     const [productArray, setProductList] = useState(productsJson);
 
-    const [categoryProductsList, setCategoryProductsList] = useState(productsJson);
+    const [categoryProductsList, setCategoryProductsList] = useState(productsJson["productsList"]);
 
     var searchArray = [];
 
@@ -29,7 +29,7 @@ function CategoryFilter(productsJson) {
 
                 setProductList(productsJson);
 
-                setCategoryProductsList(productsJson);
+                setCategoryProductsList(productsJson["productsList"]);
 
             } else {
 
