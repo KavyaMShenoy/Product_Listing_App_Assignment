@@ -7,17 +7,15 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ProductList from "./ProductList";
 
-var categoryProductsListArray = [];
-
 const category = [];
 
 function CategoryFilter(productsJson) {
 
     const [productArray, setProductList] = useState(productsJson);
 
-    var searchArray = [];
+    const [categoryProductsList, setCategoryProductsList] = useState(productsJson);
 
-    categoryProductsListArray = [...productsJson["productsList"]];
+    var searchArray = [];
 
     //Function to filter by category.
     const filterByCategory = (selectedCategory) => {
@@ -31,7 +29,7 @@ function CategoryFilter(productsJson) {
 
                 setProductList(productsJson);
 
-                categoryProductsListArray = [...productsJson["productsList"]];
+                setCategoryProductsList(productsJson);
 
             } else {
 
@@ -39,9 +37,9 @@ function CategoryFilter(productsJson) {
                     (obj) => obj.category.toLowerCase() == selectedCategory.toLowerCase()
                 );
 
-                categoryProductsListArray = [...filteredCategoryArray];
-
                 setProductList({ productsList: filteredCategoryArray });
+
+                setCategoryProductsList(filteredCategoryArray);
 
             }
 
@@ -54,7 +52,7 @@ function CategoryFilter(productsJson) {
 
         if (name.value) {
 
-            searchArray = categoryProductsListArray.filter(
+            searchArray = categoryProductsList.filter(
                 (obj) => (obj.name.toLowerCase() == name.value.toLowerCase())
             );
 
